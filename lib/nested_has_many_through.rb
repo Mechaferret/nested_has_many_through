@@ -128,7 +128,7 @@ module NestedHasManyThrough
         {
           :joins => "#{reflection.options[:joins]}",
           :remote_key => "#{remote_table_alias}.#{reflection.primary_key_name}",
-          :local_key => reflection.klass.primary_key,
+          :local_key => reflection.active_record.primary_key,
           :conditions => conditions
         }
       end
